@@ -47,7 +47,7 @@ The value for the `base` key is the glyph name of the referenced glyph.
 The value for the `transformation` is a dictionary with the following keys:
 
 | key | value | default value |
-|-|-|
+|-|-|-|
 | `x` | `x` translation in font units | `0` |
 | `y` | `y` translation in font units | `0` |
 | `rotation` | rotation angle in counter-clockwise degrees | `0` |
