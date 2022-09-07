@@ -12,11 +12,11 @@ A Variable Component is like a "regular" component, but it adds the designspace 
 
 In Glyphs, a very similar contruct is known as “Smart Components”.
 
-### What are Variable Glyphs?
+### What is a Local Design Space?
 
-In an interpolatable font family setup, glyphs generally interpolate, and therefore are variable. This variability is generally seen from a global designspace perspective. For example: the font has a Weight axis, therefore the glyphs are variable along the Weight axis.
+Around UFO, `.designspace` files are used to describe the axes and source locations for an interpolatable font system. The axes in this file are generally meant to face the end user. For example a "Weight" axis defines the range of weights the system is capable of. It also defines the source locations: for example all the "light" glyphs come from one UFO, and all the "bold" glyphs come from another.
 
-In the context of Variable Components, however, it is often useful for glyphs to have their own local designspace, that implements features that are specific to the glyph, and are specific to Variable Component use.
+In the context of Variable Components, however, it is often useful for glyphs to have their own designspace, which can implement features that are specific to the glyph, and are specific to Variable Component use.
 
 ### Better interpolatable transformations
 
@@ -26,25 +26,43 @@ To overcome this, we will define separate transformation parameters such as “r
 
 ## Variable Components in UFO
 
+We will use the glyph "lib" mechanism to store the data for Variable Components and Local Design Spaces.
+
 ### Variable Component references
 
-`com.black-foundry.variable-components`
+Instead of extending the existing `<component>` mechanism in UFO, we define an additional set of components that will have the desired properties.
 
-List of dictionaries
+The Variable Components for a glyph will be stored as a list in the `glyph.lib`, under this key:
+
+- `com.black-foundry.variable-components`
+
+The list contains zero or more dictionaries, each of which describes a variable component. Such a dictionary has three keys: `base`, `transformation` and `location`.
 
 #### Base name
 
-`base` key
+The value for the `base` key is the glyph name of the referenced glyph.
 
 #### Transformation
 
-`transformation`
+The value for the `transformation` is a dictionary with the following keys:
 
-#### Designspace Location
+| key | value | default value |
+|-|-|
+| `x` | `x` translation in font units | `0` |
+| `y` | `y` translation in font units | `0` |
+| `rotation` | rotation angle in counter-clockwise degrees | `0` |
+| `xScale` | scale factor for the `x` dimension | `1` |
+| `yScale` | scale factor for the `y` dimension | `1` |
+| `xSkew` | skew angle `x` (needs clarification) | `0` |
+| `ySkew` | skew angle `y` (ditto) | `0` |
+| `xTransformationCenter` | the `x` value for the center of transformation | `0` |
+| `yTransformationCenter` | the `y` value for the center of transformation | `0` |
 
-`location`
+#### Design Space Location
 
-### Glyph-level designspace
+The valie for the `location` key is a dictionary, with axis names as keys, and axis values as values.
+
+### Glyph-level Design Space
 
 `com.black-foundry.glyph-designspace`
 
