@@ -80,6 +80,10 @@ The value for the `location` key is a dictionary, with axis names as keys, and a
 
 ### Transformation
 
+### Missing Axis values
+
+### Local Axes that redefine Global Axes
+
 ---
 
 References:
