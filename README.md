@@ -42,7 +42,7 @@ The list contains zero or more dictionaries, each of which describes a variable 
 
 The value for the `base` key is the glyph name of the referenced glyph.
 
-#### Transformation
+#### Component Transformation
 
 The value for the `transformation` is a dictionary with the following keys:
 
@@ -60,7 +60,7 @@ The value for the `transformation` is a dictionary with the following keys:
 
 All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it can be omitted entirely.
 
-#### Design Space Location
+#### Component Design Space Location
 
 The value for the `location` key is a dictionary, with axis names as keys, and axis values as values. Axis names are strings, axis values are numbers. If the `location` dictionary is empty, it can be omitted entirely.
 
