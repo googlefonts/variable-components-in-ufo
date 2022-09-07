@@ -44,7 +44,7 @@ The value for the `base` key is the glyph name of the referenced glyph.
 
 #### Component Transformation
 
-The value for the `transformation` is a dictionary with the following keys:
+The value for the `transformation` is a dictionary with the following items:
 
 | key | value | default value |
 |-|-|-|
@@ -66,15 +66,33 @@ The value for the `location` key is a dictionary, with axis names as keys, and a
 
 ### Glyph-level Design Space
 
-`com.black-foundry.glyph-designspace`
+A glyph-level design space can be defined in a dictionary value for the `com.black-foundry.glyph-designspace` key in the `glyph.lib` of the default glyph.
+
+The dictionary must have two keys: `axes` and `sources`.
 
 #### Axes
 
-`axes`
+The value for the `axes` key is a list of axis descriptions, each of which is a dictionary with the following items:
+
+| key | value |
+|-|-|
+| `name` | The `name` of the axis |
+| `minimum` | The `minimum` value for the axis |
+| `default` | The `default` value for the axis |
+| `maximum` | The `maximum` value for the axis |
+
+These items correspond to the same-named `.designspace` `<axis>` attributes. All field are mandatory.
 
 #### Variation sources
 
-`sources`
+The value for the `sources` key is a list of source descriptions, each of which is a dictionary with the following fields:
+
+| key | value | optional |
+|-|-|-|
+| `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs | no |
+| `filename` | The file name of the UFO containing this source | yes: if not given, the default UFO source in the global system is used |
+| `layername` | The UFO layer name for this source | yes: if not given, the default layer is used |
+
 
 ## Processing
 
