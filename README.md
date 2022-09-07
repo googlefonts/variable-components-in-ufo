@@ -58,9 +58,11 @@ The value for the `transformation` is a dictionary with the following keys:
 | `xTransformationCenter` | the `x` value for the center of transformation | `0` |
 | `yTransformationCenter` | the `y` value for the center of transformation | `0` |
 
+All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it can be omitted entirely.
+
 #### Design Space Location
 
-The valie for the `location` key is a dictionary, with axis names as keys, and axis values as values.
+The value for the `location` key is a dictionary, with axis names as keys, and axis values as values. Axis names are strings, axis values are numbers. If the `location` dictionary is empty, it can be omitted entirely.
 
 ### Glyph-level Design Space
 
@@ -74,7 +76,9 @@ The valie for the `location` key is a dictionary, with axis names as keys, and a
 
 `sources`
 
+## Processing
 
+### Transformation
 
 ---
 
