@@ -32,11 +32,21 @@ We will use the glyph "lib" mechanism to store the data for Variable Components 
 
 Instead of extending the existing `<component>` mechanism in UFO, we define an additional set of components that will have the desired properties.
 
+Variable Components are glyph elements in *addition* to regular components. They can co-exist with outlines and regular components.
+
+With the mechanisms of this document in place, a glyph shape can be composed of three types of elements:
+
+1. Outlines (standard UFO glyph)
+2. Components (standard UFO glyph)
+3. Variable Components (`glyph.lib` additions)
+
 The Variable Components for a glyph will be stored as a list in the `glyph.lib`, under this key:
 
 - `com.black-foundry.variable-components`
 
-The list contains zero or more dictionaries, each of which describes a variable component. Such a dictionary has at most three keys: `base`, `transformation` and `location`, the latter two being optional.
+The list contains one or more dictionaries, each of which describes a variable component. Such a dictionary has at most three keys: `base`, `transformation` and `location`, the latter two being optional.
+
+If there are no variable components, the list should *not* be written to `glyph.lib`.
 
 #### Base name
 
