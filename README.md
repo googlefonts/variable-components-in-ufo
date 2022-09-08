@@ -76,7 +76,7 @@ The value for the `location` key is a dictionary, with axis names as keys, and a
 
 ### Glyph-level Design Space
 
-A glyph-level design space can be defined in a dictionary value for the `com.black-foundry.glyph-designspace` key in the `glyph.lib` of the default glyph.
+A glyph-level design space can be defined in a dictionary value for the `com.black-foundry.glyph-designspace` key in the `glyph.lib` in the default source for the glyph.
 
 The dictionary must have two keys: `axes` and `sources`.
 
