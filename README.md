@@ -87,7 +87,7 @@ These items correspond to the same-named `.designspace` `<axis>` attributes. All
 
 The value for the `sources` key is a list of source descriptions, each of which is a dictionary with the following fields:
 
-| key | value | optional |
+| key | value | optional? |
 |-|-|-|
 | `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs. If an axis is omitted, the default value for that axis is used. | mandatory |
 | `filename` | The file name of the UFO containing this source | optional: if not given, the default UFO source in the global system is used |
