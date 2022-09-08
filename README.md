@@ -100,9 +100,10 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 | key | value | optional? |
 |-|-|-|
 | `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs. If an axis is omitted, the default value for that axis is used. | mandatory |
-| `filename` | The file name of the UFO containing this source | optional: if not given, the default UFO source in the global system is used |
-| `layername` | The UFO layer name for this source | optional: if not given, the default layer is used |
+| `filename` | The file name or relative path (\*) of the UFO containing the source glyph data | optional: if not given, *this* UFO is used |
+| `layername` | The UFO layer containing the source glyph data | optional: if not given, the default layer is used |
 
+\*) Similar to a `.designspace` `<source>` element `filename` attribute, this is relative to the parent folder of the UFO.
 
 ## Processing
 
