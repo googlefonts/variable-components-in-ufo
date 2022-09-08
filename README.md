@@ -44,7 +44,7 @@ The Variable Components for a glyph will be stored as a non-empty list in the `g
 
 - `com.black-foundry.variable-components`
 
-The list contains one or more dictionaries, each of which describes a variable component. Such a dictionary has at most three keys: `base`, `transformation` and `location`, the latter two being optional.
+The list contains one or more dictionaries, each of which describes a variable component. Such a dictionary has at most three keys: `base`, `transformation` and `location`, each of the latter two being optional.
 
 If there are no variable components, the list should *not* be written to `glyph.lib`.
 
