@@ -37,23 +37,23 @@ test_data = [
         Transform(1, 0, 0, 2, 0, -1),
     ),
     (
-        DecomposedTransform(0, 0, -math.pi, 1, 1, 0, 0, 0, 0),
+        DecomposedTransform(0, 0, -180, 1, 1, 0, 0, 0, 0),
         Transform(-1, 0, 0, -1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, math.pi / 2, 1, 1, 0, 0, 0, 0),
+        DecomposedTransform(0, 0, 90, 1, 1, 0, 0, 0, 0),
         Transform(0, 1, -1, 0, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, 0, 1, 1, math.pi / 4, 0, 0, 0),
+        DecomposedTransform(0, 0, 0, 1, 1, 45, 0, 0, 0),
         Transform(1, 0, -1, 1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, 0, 1, 1, 0, math.pi / 4, 0, 0),
+        DecomposedTransform(0, 0, 0, 1, 1, 0, 45, 0, 0),
         Transform(1, 1, 0, 1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, math.pi / 4, 1, 1, 0, 0, 0, 0),
+        DecomposedTransform(0, 0, 45, 1, 1, 0, 0, 0, 0),
         Transform(
             0.7071067811865476,
             0.7071067811865475,
@@ -64,7 +64,7 @@ test_data = [
         ),
     ),
     (
-        DecomposedTransform(0, 0, math.pi / 4, 2, 1, 0, 0, 0, 0),
+        DecomposedTransform(0, 0, 45, 2, 1, 0, 0, 0, 0),
         Transform(
             1.4142135623730951,
             1.414213562373095,
@@ -75,12 +75,12 @@ test_data = [
         ),
     ),
     (
-        DecomposedTransform(100, 150, 0.1, 4, 3, 0.5, 0, 0, 0),
+        DecomposedTransform(100, 150, 5, 4, 3, 20, 0, 0, 0),
         Transform(
-            3.980016661112103,
-            0.3993336665873126,
-            -2.473793261525796,
-            2.766855519498978,
+            3.984778792366982,
+            0.34862297099063266,
+            -1.71180809879978,
+            2.8616957098531968,
             100.0,
             150.0,
         ),

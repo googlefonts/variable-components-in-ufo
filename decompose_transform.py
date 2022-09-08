@@ -30,9 +30,9 @@ def composeTransform(
     t = Transform()
     t = t.translate(transformationCenterX, transformationCenterY)
     t = t.translate(x, y)
-    t = t.rotate(rotationAngle)
+    t = t.rotate(math.radians(rotationAngle))
     t = t.scale(scaleX, scaleY)
-    t = t.skew(-skewAngleX, skewAngleY)
+    t = t.skew(-math.radians(skewAngleX), math.radians(skewAngleY))
     t = t.translate(-transformationCenterX, -transformationCenterY)
     return t
 
@@ -64,5 +64,13 @@ def decomposeTransform(transform: Transform) -> DecomposedTransform:
         pass
 
     return DecomposedTransform(
-        x, y, rotationAngle, scaleX, scaleY, -skewAngleX, skewAngleY, 0, 0
+        x,
+        y,
+        math.degrees(rotationAngle),
+        scaleX,
+        scaleY,
+        -math.degrees(skewAngleX),
+        math.degrees(skewAngleY),
+        0,
+        0,
     )
