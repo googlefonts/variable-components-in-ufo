@@ -46,7 +46,7 @@ test_data = [
     ),
     (
         DecomposedTransform(0, 0, 0, 1, 1, math.pi / 4, 0, 0, 0),
-        Transform(1, 0, 1, 1, 0, 0),
+        Transform(1, 0, -1, 1, 0, 0),
     ),
     (
         DecomposedTransform(0, 0, 0, 1, 1, 0, math.pi / 4, 0, 0),
@@ -79,8 +79,8 @@ test_data = [
         Transform(
             3.980016661112103,
             0.3993336665873126,
-            1.874792761644827,
-            3.203169472169176,
+            -2.473793261525796,
+            2.766855519498978,
             100.0,
             150.0,
         ),
@@ -90,7 +90,6 @@ test_data = [
 
 @pytest.mark.parametrize("decomposed, composed", test_data)
 def test_composeTransform(decomposed, composed):
-    print(decomposed)
     t = composeTransform(**decomposed._asdict())
     assert transformEqual(composed, t), tuple(t)
 
