@@ -82,7 +82,7 @@ The dictionary must have two keys: `axes` and `sources`.
 
 #### Axes
 
-The value for the `axes` key is a list of axis descriptions, each of which is a dictionary with the following items:
+The value for the `axes` key is a non-empty list of axis descriptions, each of which is a dictionary with the following items:
 
 | key | value |
 |-|-|
@@ -95,7 +95,7 @@ These items correspond to the same-named `.designspace` `<axis>` attributes. All
 
 #### Variation sources
 
-The value for the `sources` key is a list of source descriptions, each of which is a dictionary with the following fields:
+The value for the `sources` key is a non-empty list of source descriptions, each of which is a dictionary with the following fields:
 
 | key | value | optional? |
 |-|-|-|
