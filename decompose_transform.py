@@ -28,7 +28,8 @@ def composeTransform(
 ) -> Transform:
     """Compose a decomposed transform into an Affine transform."""
     t = Transform()
-    t = t.translate(x + transformationCenterX, y + transformationCenterY)
+    t = t.translate(transformationCenterX, transformationCenterY)
+    t = t.translate(x, y)
     t = t.rotate(rotationAngle)
     t = t.scale(scaleX, scaleY)
     t = t.skew(skewAngleX, skewAngleY)
