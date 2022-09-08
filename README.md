@@ -40,7 +40,7 @@ With the mechanisms of this document in place, a glyph shape can be composed of 
 2. Components (standard UFO glyph)
 3. Variable Components (`glyph.lib` additions)
 
-The Variable Components for a glyph will be stored as a list in the `glyph.lib`, under this key:
+The Variable Components for a glyph will be stored as a non-empty list in the `glyph.lib`, under this key:
 
 - `com.black-foundry.variable-components`
 
