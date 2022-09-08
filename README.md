@@ -54,7 +54,7 @@ The value for the `base` key is the glyph name of the referenced glyph.
 
 #### Component Transformation
 
-The value for the `transformation` is a dictionary with the following items:
+The value for the `transformation` key is a dictionary with the following items:
 
 | key | value | default value |
 |-|-|-|
