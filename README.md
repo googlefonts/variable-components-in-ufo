@@ -68,11 +68,11 @@ The value for the `transformation` key is a dictionary with the following items:
 | `transformationCenterX` | the `x` value for the center of transformation | `0` |
 | `transformationCenterY` | the `y` value for the center of transformation | `0` |
 
-All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it can be omitted entirely.
+All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it should be omitted entirely.
 
 #### Component Design Space Location
 
-The value for the `location` key is a dictionary, with axis names as keys, and axis values as values. Axis names are strings, axis values are numbers. If the `location` dictionary is empty, it can be omitted entirely.
+The value for the `location` key is a dictionary, with axis names as keys, and axis values as values. Axis names are strings, axis values are numbers. If the `location` dictionary is empty, it should be omitted entirely.
 
 ### Glyph-level Design Space
 
