@@ -89,9 +89,9 @@ The value for the `sources` key is a list of source descriptions, each of which 
 
 | key | value | optional |
 |-|-|-|
-| `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs. If an axis is omitted, the default value for that axis is used. | no |
-| `filename` | The file name of the UFO containing this source | yes: if not given, the default UFO source in the global system is used |
-| `layername` | The UFO layer name for this source | yes: if not given, the default layer is used |
+| `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs. If an axis is omitted, the default value for that axis is used. | mandatory |
+| `filename` | The file name of the UFO containing this source | optional: if not given, the default UFO source in the global system is used |
+| `layername` | The UFO layer name for this source | optional: if not given, the default layer is used |
 
 
 ## Processing
