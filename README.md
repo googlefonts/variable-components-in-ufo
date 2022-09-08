@@ -98,6 +98,19 @@ The value for the `sources` key is a list of source descriptions, each of which 
 
 ### Transformation
 
+The decomposed transformation can be expressed with traditional 2D Affine transform methods, as in the following pseudo code:
+
+	translate(transformationCenterX, transformationCenterY)
+	translate(x, y)
+	rotate(rotationAngle)
+	scale(scaleX, scaleY)
+	skew(skewAngleX, skewAngleY)
+	translate(-transformationCenterX, -transformationCenterY)
+
+The order of operations is significant.
+
+Example Python code implementing this is included here: [decompose_transform.py](decompose_transform.py) This also included a method to decompose an Affine transform into decomposed parameters.
+
 ### Missing Axis values
 
 ### Local Axes that redefine Global Axes
