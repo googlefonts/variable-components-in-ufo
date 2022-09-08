@@ -132,7 +132,7 @@ _To be defined_
 
 ---
 
-References:
+## Relevant links
 
 - [UFO component specification](https://unifiedfontobject.org/versions/ufo3/glyphs/glif/#component)
 - [DesignSpace documentation](https://fonttools.readthedocs.io/en/latest/designspaceLib/index.html)
