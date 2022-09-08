@@ -113,7 +113,11 @@ Example Python code implementing this is included here: [compose_transform.py](c
 
 ### Missing Axis values
 
+_To be defined_
+
 ### Local Axes that redefine Global Axes
+
+_To be defined_
 
 ---
 
