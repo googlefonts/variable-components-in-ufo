@@ -137,5 +137,6 @@ References:
 - [UFO component specification](https://unifiedfontobject.org/versions/ufo3/glyphs/glif/#component)
 - [DesignSpace documentation](https://fonttools.readthedocs.io/en/latest/designspaceLib/index.html)
 - [Variable Components in OpenType proposal](https://github.com/BlackFoundryCom/variable-components-spec)
+- [RoboCJK RoboFont plug-in](https://github.com/BlackFoundryCom/robo-cjk)
 - [rcjk-tools, RoboCJK file format tools](https://github.com/BlackFoundryCom/rcjk-tools)
 - [Fontra font editor](https://github.com/BlackFoundryCom/fontra)
