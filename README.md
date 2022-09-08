@@ -104,7 +104,7 @@ A decomposed transformation can be expressed with commonly used 2D Affine transf
 	translate(x, y)
 	rotate(rotationAngle)
 	scale(scaleX, scaleY)
-	skew(skewAngleX, skewAngleY)  # matrix: [1 tan(skewAngleY) tan(-skewAngleX) 1 0 0]
+	skew(skewAngleX, skewAngleY)  # transform([1, tan(skewAngleY), tan(-skewAngleX), 1, 0, 0])
 	translate(-transformationCenterX, -transformationCenterY)
 
 The order of operations is significant.
