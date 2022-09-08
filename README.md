@@ -51,12 +51,12 @@ The value for the `transformation` is a dictionary with the following items:
 | `x` | `x` translation in font units | `0` |
 | `y` | `y` translation in font units | `0` |
 | `rotationAngle` | rotation angle in counter-clockwise degrees | `0` |
-| `xScale` | scale factor for the `x` dimension | `1` |
-| `yScale` | scale factor for the `y` dimension | `1` |
-| `xSkewAngle` | skew angle `x` in counter-clockwise degrees | `0` |
-| `ySkewAngle` | skew angle `y` in counter-clockwise degrees | `0` |
-| `xTransformationCenter` | the `x` value for the center of transformation | `0` |
-| `yTransformationCenter` | the `y` value for the center of transformation | `0` |
+| `scaleX` | scale factor for the `x` dimension | `1` |
+| `scaleY` | scale factor for the `y` dimension | `1` |
+| `skewAngleX` | skew angle `x` in counter-clockwise degrees | `0` |
+| `skewAngleY` | skew angle `y` in counter-clockwise degrees | `0` |
+| `centerX` | the `x` value for the center of transformation | `0` |
+| `centerY` | the `y` value for the center of transformation | `0` |
 
 All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it can be omitted entirely.
 
