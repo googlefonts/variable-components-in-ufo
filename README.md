@@ -137,3 +137,4 @@ References:
 - [DesignSpace documentation](https://fonttools.readthedocs.io/en/latest/designspaceLib/index.html)
 - [Variable Components in OpenType proposal](https://github.com/BlackFoundryCom/variable-components-spec)
 - [rcjktools](https://github.com/BlackFoundryCom/rcjk-tools)
+- [Fontra](https://github.com/BlackFoundryCom/fontra)
