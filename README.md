@@ -55,8 +55,8 @@ The value for the `transformation` is a dictionary with the following items:
 | `scaleY` | scale factor for the `y` dimension | `1` |
 | `skewAngleX` | skew angle `x` in counter-clockwise degrees | `0` |
 | `skewAngleY` | skew angle `y` in counter-clockwise degrees | `0` |
-| `centerX` | the `x` value for the center of transformation | `0` |
-| `centerY` | the `y` value for the center of transformation | `0` |
+| `transformationCenterX` | the `x` value for the center of transformation | `0` |
+| `transformationCenterY` | the `y` value for the center of transformation | `0` |
 
 All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it can be omitted entirely.
 
