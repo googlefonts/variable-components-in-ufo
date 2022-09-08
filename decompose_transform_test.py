@@ -21,27 +21,27 @@ def decomposedTransformEqual(t1, t2):
 
 test_data = [
     (
-        DecomposedTransform(0, 0, 0, 1, 1, 0, 0),
+        DecomposedTransform(0, 0, 0, 1, 1, 0, 0, 0, 0),
         Transform(1, 0, 0, 1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, -math.pi, 1, 1, 0, 0),
+        DecomposedTransform(0, 0, -math.pi, 1, 1, 0, 0, 0, 0),
         Transform(-1, 0, 0, -1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, math.pi / 2, 1, 1, 0, 0),
+        DecomposedTransform(0, 0, math.pi / 2, 1, 1, 0, 0, 0, 0),
         Transform(0, 1, -1, 0, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, 0, 1, 1, math.pi / 4, 0),
+        DecomposedTransform(0, 0, 0, 1, 1, math.pi / 4, 0, 0, 0),
         Transform(1, 0, 1, 1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, 0, 1, 1, 0, math.pi / 4),
+        DecomposedTransform(0, 0, 0, 1, 1, 0, math.pi / 4, 0, 0),
         Transform(1, 1, 0, 1, 0, 0),
     ),
     (
-        DecomposedTransform(0, 0, math.pi / 4, 1, 1, 0, 0),
+        DecomposedTransform(0, 0, math.pi / 4, 1, 1, 0, 0, 0, 0),
         Transform(
             0.7071067811865476,
             0.7071067811865475,
@@ -52,7 +52,7 @@ test_data = [
         ),
     ),
     (
-        DecomposedTransform(0, 0, math.pi / 4, 2, 1, 0, 0),
+        DecomposedTransform(0, 0, math.pi / 4, 2, 1, 0, 0, 0, 0),
         Transform(
             1.4142135623730951,
             1.414213562373095,
@@ -63,7 +63,7 @@ test_data = [
         ),
     ),
     (
-        DecomposedTransform(100, 150, 0.1, 4, 3, 0.5, 0),
+        DecomposedTransform(100, 150, 0.1, 4, 3, 0.5, 0, 0, 0),
         Transform(
             3.980016661112103,
             0.3993336665873126,

@@ -11,6 +11,8 @@ class DecomposedTransform(NamedTuple):
     scaleY: float
     skewAngleX: float
     skewAngleY: float
+    transformationCenterX: float
+    transformationCenterY: float
 
 
 def composeTransform(
@@ -21,13 +23,16 @@ def composeTransform(
     scaleY: float,
     skewAngleX: float,
     skewAngleY: float,
+    transformationCenterX: float,
+    transformationCenterY: float,
 ) -> Transform:
     """Compose a deocomposed transform into an Affine transform."""
     t = Transform()
-    t = t.translate(x, y)
+    t = t.translate(x + transformationCenterX, y + transformationCenterY)
     t = t.rotate(rotationAngle)
     t = t.scale(scaleX, scaleY)
     t = t.skew(skewAngleX, skewAngleY)
+    t = t.translate(-transformationCenterX, -transformationCenterY)
     return t
 
 
@@ -58,5 +63,5 @@ def decomposeTransform(transform: Transform) -> DecomposedTransform:
         pass
 
     return DecomposedTransform(
-        x, y, rotationAngle, scaleX, scaleY, skewAngleX, skewAngleY
+        x, y, rotationAngle, scaleX, scaleY, skewAngleX, skewAngleY, 0, 0
     )
