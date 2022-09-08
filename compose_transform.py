@@ -39,6 +39,8 @@ def composeTransform(
 
 def decomposeTransform(transform: Transform) -> DecomposedTransform:
     """Decompose an Affine transformation matrix into components."""
+    # Adapted from an answer on
+    # https://math.stackexchange.com/questions/13150/extracting-rotation-scale-values-from-2d-transformation-matrix
     a, b, c, d, x, y = transform
     delta = a * d - b * c
 
