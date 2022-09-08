@@ -109,7 +109,7 @@ A decomposed transformation can be expressed with commonly used 2D Affine transf
 
 The order of operations is significant.
 
-Example Python code implementing this is included here: [compose_transform.py](compose_transform.py) This code also includes a method to decompose an Affine transform into decomposed parameters.
+Example Python code implementing this is included here: [compose_transform.py](compose_transform.py). The example code also includes a method for decomposing an Affine transform into decomposed parameters.
 
 ### Missing Axis values
 
