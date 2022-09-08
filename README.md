@@ -50,11 +50,11 @@ The value for the `transformation` is a dictionary with the following items:
 |-|-|-|
 | `x` | `x` translation in font units | `0` |
 | `y` | `y` translation in font units | `0` |
-| `rotation` | rotation angle in counter-clockwise degrees | `0` |
+| `rotationAngle` | rotation angle in counter-clockwise degrees | `0` |
 | `xScale` | scale factor for the `x` dimension | `1` |
 | `yScale` | scale factor for the `y` dimension | `1` |
-| `xSkew` | skew angle `x` (needs clarification) | `0` |
-| `ySkew` | skew angle `y` (ditto) | `0` |
+| `xSkewAngle` | skew angle `x` in counter-clockwise degrees | `0` |
+| `ySkewAngle` | skew angle `y` in counter-clockwise degrees | `0` |
 | `xTransformationCenter` | the `x` value for the center of transformation | `0` |
 | `yTransformationCenter` | the `y` value for the center of transformation | `0` |
 
