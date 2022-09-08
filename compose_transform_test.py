@@ -1,7 +1,7 @@
 import math
 from fontTools.misc.transform import Transform
 import pytest
-from decompose_transform import (
+from compose_transform import (
     composeTransform,
     decomposeTransform,
     DecomposedTransform,
