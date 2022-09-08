@@ -25,6 +25,18 @@ test_data = [
         Transform(1, 0, 0, 1, 0, 0),
     ),
     (
+        DecomposedTransform(0, 0, 0, 2, 1, 0, 0, 1, 0),
+        Transform(2, 0, 0, 1, -1, 0),
+    ),
+    (
+        DecomposedTransform(0, 0, 0, 2, 1, 0, 0, 0, 1),
+        Transform(2, 0, 0, 1, 0, 0),
+    ),
+    (
+        DecomposedTransform(0, 0, 0, 1, 2, 0, 0, 0, 1),
+        Transform(1, 0, 0, 2, 0, -1),
+    ),
+    (
         DecomposedTransform(0, 0, -math.pi, 1, 1, 0, 0, 0, 0),
         Transform(-1, 0, 0, -1, 0, 0),
     ),
@@ -86,8 +98,14 @@ def test_composeTransform(decomposed, composed):
 @pytest.mark.parametrize("decomposed, composed", test_data)
 def test_decomposeTransform(decomposed, composed):
     dec = decomposeTransform(composed)
-    if decomposed.skewAngleY:
-        # decomposition is ambiguous, and will prefer one with skewAngleY == 0
+    if (
+        decomposed.skewAngleY
+        or decomposed.transformationCenterX
+        or decomposed.transformationCenterY
+    ):
+        # decomposition can be done multiple ways:
+        # 1. it will prefer skewAngleY == 0
+        # 2. transformationCenterX and transformationCenterY are lost
         assert not decomposedTransformEqual(decomposed, dec)
     else:
         assert decomposedTransformEqual(decomposed, dec)
