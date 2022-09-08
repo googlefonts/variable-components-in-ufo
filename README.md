@@ -103,7 +103,7 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 | `filename` | The file name or relative path (\*) of the UFO containing the source glyph data | optional: if not given, *this* UFO is used |
 | `layername` | The UFO layer containing the source glyph data | optional: if not given, the default layer is used |
 
-\*) Similar to a `.designspace` `<source>` element `filename` attribute, this is relative to the parent folder of the UFO.
+\*) Similar to a `.designspace` `<source>` element `filename` attribute, this `filename` is relative to the parent folder of *this* UFO.
 
 ## Processing
 
