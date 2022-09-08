@@ -26,7 +26,7 @@ def composeTransform(
     transformationCenterX: float,
     transformationCenterY: float,
 ) -> Transform:
-    """Compose a deocomposed transform into an Affine transform."""
+    """Compose a decomposed transform into an Affine transform."""
     t = Transform()
     t = t.translate(x + transformationCenterX, y + transformationCenterY)
     t = t.rotate(rotationAngle)
