@@ -6,34 +6,34 @@ from fontTools.misc.transform import Transform
 class DecomposedTransform(NamedTuple):
     x: float
     y: float
-    rotationAngle: float
+    rotation: float
     scaleX: float
     scaleY: float
-    skewAngleX: float
-    skewAngleY: float
-    transformationCenterX: float
-    transformationCenterY: float
+    skewX: float
+    skewY: float
+    tCenterX: float
+    tCenterY: float
 
 
 def composeTransform(
     x: float,
     y: float,
-    rotationAngle: float,
+    rotation: float,
     scaleX: float,
     scaleY: float,
-    skewAngleX: float,
-    skewAngleY: float,
-    transformationCenterX: float,
-    transformationCenterY: float,
+    skewX: float,
+    skewY: float,
+    tCenterX: float,
+    tCenterY: float,
 ) -> Transform:
     """Compose a decomposed transform into an Affine transform."""
     t = Transform()
-    t = t.translate(transformationCenterX, transformationCenterY)
+    t = t.translate(tCenterX, tCenterY)
     t = t.translate(x, y)
-    t = t.rotate(math.radians(rotationAngle))
+    t = t.rotate(math.radians(rotation))
     t = t.scale(scaleX, scaleY)
-    t = t.skew(-math.radians(skewAngleX), math.radians(skewAngleY))
-    t = t.translate(-transformationCenterX, -transformationCenterY)
+    t = t.skew(-math.radians(skewX), math.radians(skewY))
+    t = t.translate(-tCenterX, -tCenterY)
     return t
 
 
@@ -44,23 +44,23 @@ def decomposeTransform(transform: Transform) -> DecomposedTransform:
     a, b, c, d, x, y = transform
     delta = a * d - b * c
 
-    rotationAngle = 0
+    rotation = 0
     scaleX = scaleY = 0
-    skewAngleX = skewAngleY = 0
+    skewX = skewY = 0
 
     # Apply the QR-like decomposition.
     if a != 0 or b != 0:
         r = math.sqrt(a * a + b * b)
-        rotationAngle = math.acos(a / r) if b > 0 else -math.acos(a / r)
+        rotation = math.acos(a / r) if b > 0 else -math.acos(a / r)
         scaleX, scaleY = (r, delta / r)
-        skewAngleX, skewAngleY = (math.atan((a * c + b * d) / (r * r)), 0)
+        skewX, skewY = (math.atan((a * c + b * d) / (r * r)), 0)
     elif c != 0 or d != 0:
         s = math.sqrt(c * c + d * d)
-        rotationAngle = math.pi / 2 - (
+        rotation = math.pi / 2 - (
             math.acos(-c / s) if d > 0 else -math.acos(c / s)
         )
         scaleX, scaleY = (delta / s, s)
-        skewAngleX, skewAngleY = (0, math.atan((a * c + b * d) / (s * s)))
+        skewX, skewY = (0, math.atan((a * c + b * d) / (s * s)))
     else:
         # a = b = c = d = 0
         pass
@@ -68,11 +68,11 @@ def decomposeTransform(transform: Transform) -> DecomposedTransform:
     return DecomposedTransform(
         x,
         y,
-        math.degrees(rotationAngle),
+        math.degrees(rotation),
         scaleX,
         scaleY,
-        -math.degrees(skewAngleX),
-        math.degrees(skewAngleY),
+        -math.degrees(skewX),
+        math.degrees(skewY),
         0,
         0,
     )

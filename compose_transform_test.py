@@ -98,13 +98,13 @@ def test_composeTransform(decomposed, composed):
 def test_decomposeTransform(decomposed, composed):
     dec = decomposeTransform(composed)
     if (
-        decomposed.skewAngleY
-        or decomposed.transformationCenterX
-        or decomposed.transformationCenterY
+        decomposed.skewY
+        or decomposed.tCenterX
+        or decomposed.tCenterY
     ):
         # decomposition can be done multiple ways:
-        # 1. it will prefer skewAngleY == 0
-        # 2. transformationCenterX and transformationCenterY are lost
+        # 1. it will prefer skewY == 0
+        # 2. tCenterX and tCenterY are lost
         assert not decomposedTransformEqual(decomposed, dec)
     else:
         assert decomposedTransformEqual(decomposed, dec)

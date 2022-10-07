@@ -60,13 +60,13 @@ The value for the `transformation` key is a dictionary with the following items:
 |-|-|-|
 | `x` | `x` translation in font units | `0` |
 | `y` | `y` translation in font units | `0` |
-| `rotationAngle` | rotation angle in counter-clockwise degrees | `0` |
+| `rotation` | rotation angle in counter-clockwise degrees | `0` |
 | `scaleX` | scale factor for the `x` dimension | `1` |
 | `scaleY` | scale factor for the `y` dimension | `1` |
-| `skewAngleX` | skew angle `x` in counter-clockwise degrees | `0` |
-| `skewAngleY` | skew angle `y` in counter-clockwise degrees | `0` |
-| `transformationCenterX` | the `x` value for the center of transformation | `0` |
-| `transformationCenterY` | the `y` value for the center of transformation | `0` |
+| `skewX` | skew angle `x` in counter-clockwise degrees | `0` |
+| `skewY` | skew angle `y` in counter-clockwise degrees | `0` |
+| `tCenterX` | the `x` value for the center of transformation | `0` |
+| `tCenterY` | the `y` value for the center of transformation | `0` |
 
 All values are numbers. All keys are optional. If the `transformation` dictionary is empty, it should be omitted entirely.
 
@@ -111,12 +111,12 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 
 A decomposed transformation can be expressed with commonly used 2D Affine transform operations, like in the following pseudo code:
 
-	translate(transformationCenterX, transformationCenterY)
+	translate(tCenterX, tCenterY)
 	translate(x, y)
-	rotate(rotationAngle)
+	rotate(rotation)
 	scale(scaleX, scaleY)
-	skew(skewAngleX, skewAngleY)  # transform([1, tan(skewAngleY), tan(-skewAngleX), 1, 0, 0])
-	translate(-transformationCenterX, -transformationCenterY)
+	skew(skewX, skewY)  # transform([1, tan(skewY), tan(-skewX), 1, 0, 0])
+	translate(-tCenterX, -tCenterY)
 
 The order of operations is significant.
 
