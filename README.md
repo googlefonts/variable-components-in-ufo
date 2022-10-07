@@ -58,8 +58,8 @@ The value for the `transformation` key is a dictionary with the following items:
 
 | key | value | default value |
 |-|-|-|
-| `x` | `x` translation in font units | `0` |
-| `y` | `y` translation in font units | `0` |
+| `translateX` | `x` translation in font units | `0` |
+| `translateY` | `y` translation in font units | `0` |
 | `rotation` | rotation angle in counter-clockwise degrees | `0` |
 | `scaleX` | scale factor for the `x` dimension | `1` |
 | `scaleY` | scale factor for the `y` dimension | `1` |
@@ -112,7 +112,7 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 A decomposed transformation can be expressed with commonly used 2D Affine transform operations, like in the following pseudo code:
 
 	translate(tCenterX, tCenterY)
-	translate(x, y)
+	translate(translateX, translateY)
 	rotate(rotation)
 	scale(scaleX, scaleY)
 	skew(skewX, skewY)  # transform([1, tan(skewY), tan(-skewX), 1, 0, 0])

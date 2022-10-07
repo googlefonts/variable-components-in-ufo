@@ -4,8 +4,8 @@ from fontTools.misc.transform import Transform
 
 
 class DecomposedTransform(NamedTuple):
-    x: float
-    y: float
+    translateX: float
+    translateY: float
     rotation: float
     scaleX: float
     scaleY: float
@@ -16,8 +16,8 @@ class DecomposedTransform(NamedTuple):
 
 
 def composeTransform(
-    x: float,
-    y: float,
+    translateX: float,
+    translateY: float,
     rotation: float,
     scaleX: float,
     scaleY: float,
@@ -29,7 +29,7 @@ def composeTransform(
     """Compose a decomposed transform into an Affine transform."""
     t = Transform()
     t = t.translate(tCenterX, tCenterY)
-    t = t.translate(x, y)
+    t = t.translate(translateX, translateY)
     t = t.rotate(math.radians(rotation))
     t = t.scale(scaleX, scaleY)
     t = t.skew(-math.radians(skewX), math.radians(skewY))
