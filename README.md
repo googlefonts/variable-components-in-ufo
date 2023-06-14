@@ -28,7 +28,7 @@ To overcome this, we will define separate transformation parameters such as “r
 
 We will use the glyph "lib" mechanism to store the data for Variable Components and Local Design Spaces.
 
-In the context of a .designspace file, the variable component data will be stored in the UFO for the _default source_
+In the context of a .designspace document, the variable component data will be stored in the UFO for the _default source_.
 
 ### Variable Component references
 
