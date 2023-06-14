@@ -101,6 +101,7 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 
 | key | value | optional? |
 |-|-|-|
+| `name` | The UI name for the source | optional: it has no significance for the data, but it can be helpful for designers to identify the source |
 | `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs. If an axis is omitted, the default value for that axis is used. | mandatory |
 | `layername` | The UFO layer containing the source glyph data | optional: if not given, the default layer is used |
 
