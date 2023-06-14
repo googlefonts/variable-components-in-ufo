@@ -28,6 +28,8 @@ To overcome this, we will define separate transformation parameters such as “r
 
 We will use the glyph "lib" mechanism to store the data for Variable Components and Local Design Spaces.
 
+In the context of a .designspace document, the variable component data will be stored in the UFO for the _default source_.
+
 ### Variable Component references
 
 Instead of extending the existing `<component>` mechanism in UFO, we define an additional set of components that will have the desired properties.
@@ -100,10 +102,7 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 | key | value | optional? |
 |-|-|-|
 | `location` | The design space `location` of the source, as a dictionary of axis name / axis value pairs. If an axis is omitted, the default value for that axis is used. | mandatory |
-| `filename` | The file name or relative path (\*) of the UFO containing the source glyph data | optional: if not given, *this* UFO is used |
 | `layername` | The UFO layer containing the source glyph data | optional: if not given, the default layer is used |
-
-\*) Similar to a `.designspace` `<source>` element `filename` attribute, this `filename` is relative to the parent folder of *this* UFO.
 
 ## Processing
 
