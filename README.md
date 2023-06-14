@@ -109,7 +109,7 @@ The value for the `sources` key is a non-empty list of source descriptions, each
 
 ### Transformation
 
-A decomposed transformation can be expressed with commonly used 2D Affine transform operations, like in the following pseudo code:
+A decomposed transformation can be expressed with commonly used 2D Affine transform operations, like in the following pseudo code (angles are in degrees):
 
 	translate(tCenterX, tCenterY)
 	translate(translateX, translateY)
