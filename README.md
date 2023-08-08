@@ -132,7 +132,8 @@ _To be defined_
 
 ## Examples
 
-This repository contains a small example project in the ["ExampleVariableComponent"](ExampleVariableComponent) folder.
+This repository contains a small example project in the
+[ExampleVariableComponent](ExampleVariableComponent) folder.
 
 ---
 
