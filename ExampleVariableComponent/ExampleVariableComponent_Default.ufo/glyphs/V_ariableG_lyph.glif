@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="VariableGlyph" format="2">
+  <outline>
+    <contour>
+      <point x="-10" y="-10" type="line"/>
+      <point x="10" y="-10" type="line"/>
+      <point x="10" y="10" type="line"/>
+      <point x="-10" y="10" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.black-foundry.glyph-designspace</key>
+      <dict>
+        <key>axes</key>
+        <array>
+          <dict>
+            <key>default</key>
+            <integer>20</integer>
+            <key>maximum</key>
+            <integer>700</integer>
+            <key>minimum</key>
+            <integer>20</integer>
+            <key>name</key>
+            <string>height</string>
+          </dict>
+          <dict>
+            <key>default</key>
+            <integer>20</integer>
+            <key>maximum</key>
+            <integer>700</integer>
+            <key>minimum</key>
+            <integer>20</integer>
+            <key>name</key>
+            <string>width</string>
+          </dict>
+        </array>
+        <key>sources</key>
+        <array>
+          <dict>
+            <key>location</key>
+            <dict>
+              <key>height</key>
+              <real>20.0</real>
+              <key>width</key>
+              <real>20.0</real>
+            </dict>
+          </dict>
+          <dict>
+            <key>layername</key>
+            <string>width=200,height=700</string>
+            <key>location</key>
+            <dict>
+              <key>height</key>
+              <integer>700</integer>
+            </dict>
+          </dict>
+          <dict>
+            <key>layername</key>
+            <string>width=700,height=700</string>
+            <key>location</key>
+            <dict>
+              <key>height</key>
+              <integer>700</integer>
+              <key>width</key>
+              <integer>700</integer>
+            </dict>
+          </dict>
+          <dict>
+            <key>layername</key>
+            <string>width=700,height=200</string>
+            <key>location</key>
+            <dict>
+              <key>width</key>
+              <integer>700</integer>
+            </dict>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

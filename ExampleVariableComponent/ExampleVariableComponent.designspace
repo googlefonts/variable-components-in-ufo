@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.1">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="400" maximum="900" default="400"/>
+    <axis tag="wdth" name="Width" minimum="50" maximum="150" default="100"/>
+  </axes>
+  <sources>
+    <source filename="ExampleVariableComponent_Default.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="ExampleVariableComponent_Weight=900.ufo" stylename="Weight=900" layer="public.default">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="ExampleVariableComponent_Width=150.ufo" stylename="Width=150" layer="public.default">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Width" xvalue="150"/>
+      </location>
+    </source>
+    <source filename="ExampleVariableComponent_Weight=900,Width=150.ufo" stylename="Weight=900,Width=150" layer="public.default">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Width" xvalue="150"/>
+      </location>
+    </source>
+    <source filename="ExampleVariableComponent_Width=50.ufo" stylename="Width=50" layer="public.default">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="ExampleVariableComponent_Weight=900,Width=50.ufo" stylename="Weight=900,Width=50" layer="public.default">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Width" xvalue="50"/>
+      </location>
+    </source>
+  </sources>
+</designspace>

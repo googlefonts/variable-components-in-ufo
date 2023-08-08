@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="VariableGlyph" format="2">
+  <advance width="200"/>
+  <outline>
+    <contour>
+      <point x="22" y="12" type="line"/>
+      <point x="175" y="18" type="line"/>
+      <point x="203" y="168" type="line"/>
+      <point x="15" y="181" type="line"/>
+    </contour>
+  </outline>
+</glyph>
