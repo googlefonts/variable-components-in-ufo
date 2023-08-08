@@ -130,6 +130,10 @@ _To be defined_
 
 _To be defined_
 
+## Examples
+
+This repository contains a small example project in the ["ExampleVariableComponent"](ExampleVariableComponent) folder.
+
 ---
 
 ## Relevant links
