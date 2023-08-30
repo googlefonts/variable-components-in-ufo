@@ -38,15 +38,6 @@
         <key>sources</key>
         <array>
           <dict>
-            <key>location</key>
-            <dict>
-              <key>height</key>
-              <real>20.0</real>
-              <key>width</key>
-              <real>20.0</real>
-            </dict>
-          </dict>
-          <dict>
             <key>layername</key>
             <string>width=200,height=700</string>
             <key>location</key>
