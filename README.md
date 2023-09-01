@@ -117,7 +117,7 @@ The UFO in which the source data is stored is _implied by the global portion of 
 
 For example, if a source location is at `Weight=800, Width=30, LocalAxis=23`, where "Weight" and "Width" are global axes, and "LocalAxis" is a local axis, the source UFO will be the one associated with `Weight=800, Width=30`. There _must_ be a source defined in the `.designspace` document for the global portion of the location.
 
-If a variable glyph defines a local axis with the _same name_ as a global axis, it has precedence over the global axis, and an axis value for this axis in a source location belongs to the _local_ portion of the location, and therefore does _not_ participate in deciding which UFO the source data is stored in.
+If a variable glyph defines a local axis with the _same name_ as a global axis, the local axis has precedence over the global axis. An axis value for such an axis in a source location belongs to the _local portion_ of the location, and therefore does _not_ participate in deciding which UFO the source data is stored in.
 
 ## Processing
 
