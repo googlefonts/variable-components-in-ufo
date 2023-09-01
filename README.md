@@ -144,7 +144,7 @@ Axis values are passed down the component hierarchy, and can per component be ov
 
 For example, we have a glyph `/A`, which has a component referencing a glyph `/B`, which in turn references a glyph `/C`. `/C` responds to the global "Weight" axis (meaning it has source locations that include "Weight" variations), but `/B` does not. When we render glyph `/A` at `Weight=234`, that location is passed to `/B`, but `/B` doesn't specify "Weight" in its location for `/C`. `Weight=234` is passed to `/C` in addition to the axis values that `/B` _does_ specify for `/C`.
 
-### Missing Axis values
+### Missing axis values in source locations
 
 If a source location does not contain a value for a locally defined axis, the axis' default value is implied.
 
