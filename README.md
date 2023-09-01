@@ -136,7 +136,7 @@ The order of operations is significant.
 
 Example Python code implementing this is included here: [compose_transform.py](compose_transform.py). The example code also includes a method for decomposing an Affine transform into decomposed parameters.
 
-### Axis values versus nested components
+### Axis values and nested components
 
 Each glyph's rendered location is determined by its parent composite. If there is no parent, the global design space location is used.
 
