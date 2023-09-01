@@ -136,6 +136,14 @@ The order of operations is significant.
 
 Example Python code implementing this is included here: [compose_transform.py](compose_transform.py). The example code also includes a method for decomposing an Affine transform into decomposed parameters.
 
+### Axis values versus nested components
+
+Each glyph's rendered location is determined by its parent composite. If there is no parent, the global design space location is used.
+
+Axis values are passed down the component hierarchy, and can per component be overwritten by an axis value in the component's location. Another way of describing this is this: component locations may be sparse, which allows parent locations to be passed down the component hierarchy.
+
+For example, we have a glyph `/A`, which has a component referencing a glyph `/B`, which in turn references a glyph `/C`. `/C` responds to the global "Weight" axis (meaning it has source locations that include "Weight" variations), but `/B` does not. When we render glyph `/A` at `Weight=234`, that location is passed to `/B`, but `/B` doesn't specify "Weight" in its location for `/C`. `Weight=234` is passed to `/C` in addition to the axis values that `/B` _does_ specify for `/C`.
+
 ### Missing Axis values
 
 If a source location does not contain a value for a locally defined axis, the axis' default value is implied.
