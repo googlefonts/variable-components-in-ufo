@@ -101,7 +101,7 @@ These items correspond to the same-named `.designspace` `<axis>` attributes. All
 
 ### Variation sources
 
-Each variation source defines a location in the augmented design space. The location implicitily determines in which UFO the glyph source data is stored. The UFO _layer_ is defined explicitly.
+Each variation source defines a location in the augmented design space. The location _implicitly_ determines in which UFO the glyph source data is stored. The UFO _layer_ is defined explicitly.
 
 The value for the `sources` key is list of source descriptions, each of which is a dictionary with the following fields:
 
