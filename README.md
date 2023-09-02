@@ -150,7 +150,7 @@ If a source location does not contain a value for a locally defined axis, the ax
 
 ### Local Axes that use the same name as Global Axes
 
-The behavior for this is a bit of an open question.
+_The behavior for this situation is still a bit of an open question._
 
 Fontra does have a defined behavior in the case, which I will try to describe below. But I am not convinced this is generally useful behavior, and it complicates things and is hard to explain.
 
