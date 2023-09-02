@@ -152,7 +152,7 @@ If a source location does not contain a value for a locally defined axis, the ax
 
 _The behavior for this situation is still a bit of an open question._
 
-Fontra does have a defined behavior in the case, which I will try to describe below. But I am not convinced this is generally useful behavior, and it complicates things and is hard to explain.
+Fontra does have a defined behavior in this case, which I will try to describe below. But I am not convinced this is generally useful behavior, and it complicates things and is hard to explain.
 
 When rendering a glyph with a local axis that has the same name as a global axis, the global axis value is remapped from `.designspace` "design space coordinates" to the local axis range. A glyph can therefore effectively override the global axis range value with its own. Note that this breaks down if in one coordinate space the default axis value is the same as a minimum or maximum value, but the other coordinate space it is not, or vice versa.
 
