@@ -50,7 +50,7 @@ If there are no variable components, the list should *not* be written to `glyph.
 
 ### Base name
 
-The value for the `base` key is the glyph name of the referenced glyph. (The name for this key is chosen for symmetry with the `<component>` element in UFO glyphs, which has a `base` attribute with the same function.)
+The value for the `base` key is the glyph name of the referenced glyph. The name for this key is chosen for symmetry with the `<component>` element in UFO glyphs, which has a `base` attribute with the same function.
 
 ### Component Transformation
 
