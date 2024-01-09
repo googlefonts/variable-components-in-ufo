@@ -1,2 +1,2 @@
-fonttools==4.37.1
+fonttools==4.43.0
 pytest==7.1.3
