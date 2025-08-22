@@ -1,3 +1,5 @@
+This repository is now archived. Go to https://github.com/fontra/variable-components-in-ufo for new development.
+
 # Storing Variable Components in UFO files
 
 ## Introduction
